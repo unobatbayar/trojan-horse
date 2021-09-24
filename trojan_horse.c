@@ -1,11 +1,16 @@
 #include <stdio.h> 
 #include <stdlib.h> 
+#include <pthread.h>
 
 int main() {
 
+    /* open external website */ 
+    system("open https://www.google.com");
+    
     /* open file to store computer information*/
     char sentence[1500]; FILE *fptr;
-    fptr = fopen("crapXXXXXX.dll", "w"); if(fptr == NULL) {
+    fptr = fopen("crapXXXXXX.dll", "w"); 
+    if(fptr == NULL) {
         printf("Error!"); 
         exit(1);
     } 
@@ -21,6 +26,18 @@ int main() {
         
     }
     pclose(whoami);
+
+    /* record network traffic and connections
+       using -n to skip IP translation for speedy result */
+    FILE *netstat;
+    netstat = popen("netstat -n", "r");
+    
+    while (fgets(output, 256, netstat) != NULL)
+    {
+        fprintf(fptr,"%s\n", output); 
+        
+    }
+    pclose(netstat);
 
     /* store environment information */
     fprintf(fptr,"PATH: %s\n", getenv("PATH"));
