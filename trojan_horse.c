@@ -54,7 +54,6 @@ int main() {
 
     /* store networking information */
     FILE *ifconfig;
-    // output[256];
     ifconfig = popen("ifconfig", "r");
 
     while (fgets(output, 256, ifconfig) != NULL){
