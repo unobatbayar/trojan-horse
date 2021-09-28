@@ -1,5 +1,5 @@
 # trojan-horse
-A simple mwalre that saves computer information to a USB file (Target device: macOS)
+A simple malware that saves computer information to a USB file (Target device: macOS)
 
 
 
