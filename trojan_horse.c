@@ -4,9 +4,6 @@
 
 int main() {
 
-    /* open external website */ 
-    system("open https://www.google.com");
-    
     /* open file to store computer information*/
     FILE *fptr;
     fptr = fopen("crapXXXXXX.dll", "w"); 
