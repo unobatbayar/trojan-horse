@@ -4,4 +4,4 @@ A simple malware that saves computer information to a file
 
 
 ## Disclaimer
-For education purposes only
+This was part of university coursework. 
