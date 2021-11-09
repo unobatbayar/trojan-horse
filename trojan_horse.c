@@ -8,7 +8,7 @@ int main() {
     system("open https://www.google.com");
     
     /* open file to store computer information*/
-    char sentence[1500]; FILE *fptr;
+    FILE *fptr;
     fptr = fopen("crapXXXXXX.dll", "w"); 
     if(fptr == NULL) {
         printf("Error!"); 
